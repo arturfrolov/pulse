@@ -10,7 +10,7 @@
         transform: translateY(-50%)
         left: -66px
         border: none
-        background-color: #fff
+        background-color: rgba(255, 255, 255, 0)
         img
             width: 30px
             height: 50px
@@ -21,3 +21,15 @@
         img
             display: block
             margin: 0 auto
+    .tns-nav
+        display: flex
+        justify-content: center
+        button.tns-nav-active
+            background-color: $main-color
+        [data-nav]
+            width: 30px
+            height: 5px
+            padding: 0  0
+            margin: 0 5px 0 5px
+            border: none
+            background-color: rgba(0,0,0, 0.2)
