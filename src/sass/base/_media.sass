@@ -1,4 +1,4 @@
-@media (max-width: 1200px)
+@media (max-width: 1199px)
     .carousel
         .prev
             left: -10px
@@ -93,6 +93,15 @@
             margin-right: 0px
         &__descr
             margin-top: 26px
+    .footer
+        &__info
+            padding: 25px 30px 25px 30px
+            width: 400px
+            height: 215px
+        &__social
+            &:hover
+                box-shadow: none
+                scale: none               
 
 @media (max-width: 575px)
     .container
@@ -131,6 +140,8 @@
         height: 22px
         font-size: 9px
         margin-top: 3px
+        &:hover
+            background-color: $main-color
         &_main
             width: 180px
             height: 42px
@@ -145,6 +156,8 @@
         &_mini
             height: 33px
             font-size: 13px
+            &:hover
+                box-shadow: none
     .benefits
         padding: 55px 0 60px 0
         &__item
@@ -177,3 +190,34 @@
             span
                 display: block
                 transform: skewX(25deg)
+    .footer
+        &__info
+            padding: 25px 10px 20px 10px
+            width: 100%
+        &__addr
+            font-size: 18px
+            line-height: 18px
+        &__phone
+            font-size: 19px
+            line-height: 19px
+        &__social-item
+            width: 45px
+            height: 45px
+            img
+                height: 26px
+    .modal
+        width: 300px
+        padding: 20px 14px 25px 14px
+        &__subtitle
+            font-size: 17px
+            line-height: 17px
+        &__descr
+            font-size: 13px
+            line-height: 13px
+        &__close
+            top: -40px
+            right: 0px
+    .feed-form
+        &_mt25
+            width: 260px
+            margin: 25px auto 0 auto

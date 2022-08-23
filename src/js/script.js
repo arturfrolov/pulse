@@ -75,4 +75,54 @@ $(document).ready(function(){
 
   toggleSlide('.catalog-item__link');
   toggleSlide('.catalog-item__back');
+
+  // Modal
+
+  $('[data-modal=consultation]').on('click', function() {
+    $('.overlay, #consultation').fadeIn('slow');
+  });
+  $('.modal__close').on('click', function() {
+    $('.overlay, #consultation, #order, #thanks').fadeOut('fast');
+  });
+  
+  $('.button_mini').each(function(i) {
+    $(this).on('click', function() {
+      $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+      $('.overlay, #order').fadeIn('slow');
+    });
+  });
+
+  function validateForms(form){
+    $(form).validate({ 
+      rules: {
+        name: {
+          required: true,
+          minlength: 2
+        },
+        phone: "required",
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        name: {
+          required: "Пожалуйста, укажите ваше имя",
+          minlength: jQuery.validator.format("Требуется не менее {0} символов!")
+        },
+        phone: "Пожалуйста, укажите ваш номер телефона",
+        email: {
+          required: "Пожалуйста, укажите вашу почту",
+          email: "Пожалуйста, укажите правильный адресс почты"
+        }
+      },
+      errorClass: "invalid"
+    });
+  };
+
+  validateForms ('#consultation-form');
+  validateForms ('#order form');
+  validateForms ('#consultation form');
+
+  $('input[name=phone]').mask("+38 (999) 999-99-99");
 });
