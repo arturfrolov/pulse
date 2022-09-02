@@ -16,6 +16,8 @@
 //     });
 //   });
 
+// Slider
+
 const slider = tns({
     container: '.carousel__inner',
     items: 1,
@@ -33,12 +35,16 @@ const slider = tns({
 });
 
 document.querySelector('.prev').addEventListener('click', function () {
+    passive: true,
     slider.goTo('prev');
   });
 
 document.querySelector('.next').addEventListener('click', function () {
+    passive: true,
     slider.goTo('next');
   });
+
+  // Tabs
 
 $(document).ready(function(){
   $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
