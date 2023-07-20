@@ -130,7 +130,11 @@ $(document).ready(function(){
   validateForms ('#order form');
   validateForms ('#consultation form');
 
+  //phone mask
+
   $('input[name=phone]').mask("+38 (999) 999-99-99");
+
+  //phpMailer
 
   $('form').submit(function(e) {
     e.preventDefault();
